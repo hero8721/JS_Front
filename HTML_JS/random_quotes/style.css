@@ -1,0 +1,47 @@
+*{
+    margin: 0%;
+}
+
+body{
+    background-image:linear-gradient(rgb(0,0,0,0.75), 
+    rgba(0,0,0,0.75)), url(https://cdn.pixabay.com/photo/2018/03/19/18/20/business-3240767_960_720.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    /* border: 1px solid rebeccapurple; */
+    width: 95%;
+    height: 90vh;
+    display: flex;
+}
+
+.button{
+text-align: center;
+}
+
+.quotes{
+    border: 1px solid rebeccapurple;
+    width: 900px;
+    height: 450px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    color:cyan;
+    border: 10px solid #f4d1ae;
+}
+
+.quotes h3{
+    font-family: 'Sofia', serif;
+}
+
+@media(max-width: 480px){
+    .quotes p, h3{
+        font-size: 1rem;
+    }
+}
