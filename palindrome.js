@@ -4,7 +4,7 @@ const prom_1 = prom.split("").reverse();
 let i = 0;
 
 while(i<prom.length){
-    if(prom[i] == prom_1[i]){
+    if(prom[i] === prom_1[i]){
         i++;
     }
     else{
