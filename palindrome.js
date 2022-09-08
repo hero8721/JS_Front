@@ -12,6 +12,6 @@ while(i<prom.length){
         break;
     }  
 }
-if(i==prom.length){
+if(i === prom.length){
     console.log(`This word is palindrome: ${prom}`);
 }
