@@ -1,0 +1,260 @@
+*{
+    /* border: 1px red solid; */
+    margin: 3px;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+/* BODY */
+
+body{
+    font-family: 'Kanit', sans-serif;
+    padding: 70px;
+    background: linear-gradient(-45deg, #f75321, #a31f52, #4ba1c0, #33d0ac);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    text-align: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-city{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+input, button{
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+}
+
+img {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+
+/*SECTION 1*/
+header{
+    padding: 40px;
+}
+
+header h1{
+    font-size: 3rem;
+    height: auto;
+    padding: auto;
+    color:rgb(248, 248, 248);
+}
+
+header h3{
+    font-size: 1,5rem;
+    height: auto;
+    padding: auto;
+    color: azure;
+}
+
+header form{
+    position: relative;
+    display: block;
+    align-items: center; 
+}
+
+header form input{
+    font-size: 2rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+    border-bottom: 3px #76fbfb solid;
+    margin-top: 10px;
+}
+
+header form input[type=text]{
+    color: lightgoldenrodyellow;
+}
+
+header form input::placeholder{
+    color: lightgoldenrodyellow;
+    opacity: 0.3;
+}
+
+header form button{
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 15px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background: #e7a0fc;
+    transition: background 0.3s ease-in-out;
+}
+
+header form button:hover{
+    background-color: #481757;
+}
+
+header form .msg {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    max-width: 450px;
+    min-height: 30px;
+}
+
+/*SECTION 2*/
+main{
+  margin: 70px 0 20px;
+}
+
+
+main .city {
+  margin: 10px 0 10px;
+  position: relative;
+  padding: 10px 10%;
+  border-radius: 20px;
+}
+
+main .city[type=text]{
+  color: #000000;
+}
+
+main .city::after{
+  content: '';
+  width: 90%;
+  height: 50px;
+  position: absolute;
+  bottom: -12px;
+  left: 5%;
+  z-index: -1;
+  opacity: 0.3;
+  border-radius: 20px;
+}
+
+main figure{
+  align-items: center;
+}
+
+main figcaption{
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+main .city-temp{
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color:#000000;
+}
+
+main .city sup{
+  font-size: 0.5em;
+}
+
+main .city-name sup{
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  color: lightgoldenrodyellow;
+  background: orange;
+}
+
+main .city-icon{
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    height: 5vh;
+    text-align: right;
+    font-size: 1rem;
+    color: rgb(241, 207, 253);
+    margin-top: 3px;
+}
+
+footer a{
+    color: rgb(241, 207, 253);
+    text-decoration: none;
+}
+
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 30px;
+  }
+  
+}
+
+@media screen and (max-width: 700px) {
+  header h1,
+  main .city-temp {
+    font-size: 3rem;
+  }
+  
+  main {
+    margin-top: 20px;
+  }
+  
+  header form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  header form input,
+  header form button {
+    width: 100%;
+  }
+
+  header form button {
+    margin: 20px 0 0 0;
+  }
+  
+  header p {
+    position: static;
+    max-width: none;
+    min-height: 0;
+    margin-top: 10px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 15px;
+  }
+
+}
+
+
